@@ -1,0 +1,7 @@
+mixin user(imageAutor,author,work)
+    header.card__header
+        .user__image-autor 
+            img(src=imageAutor, alt="author").user__image
+        .user__autor 
+            p.user__name= author
+            p.user.work=work 

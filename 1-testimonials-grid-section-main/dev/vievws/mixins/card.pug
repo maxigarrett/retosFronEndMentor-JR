@@ -1,0 +1,9 @@
+mixin card(title,descriptionAuthor)
+    article.card.user
+        //-con solo escribir block podemos meter otro mixin dentro si ponemos el block abajo se ubicara el 
+        //- contenido abajo y donde llamemos al mixi deberemos ponerlo identado hacia adentro dentro de este
+        //-(el otro mixin llamado user.pug lo llamamos dentro de este en index.pug)
+        block 
+        h1.card__title=title
+        blockquote.card__description=descriptionAuthor
+    
