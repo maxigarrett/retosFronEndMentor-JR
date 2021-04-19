@@ -1,3 +1,4 @@
-body{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-}
+@use 'config/variables';
+@use 'base/base';
+@use 'blocks/card';
+@use 'blocks/user';

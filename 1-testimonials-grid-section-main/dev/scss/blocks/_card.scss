@@ -1,0 +1,44 @@
+@use '../config/variables' as *;
+
+.card{
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &__title{
+        text-align: left;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    &__description{
+        color: var(--description-color,$very-dark-grayish-blue);
+    }
+    &__description--is-ligth{
+        --description-color:#ffffffaa;
+    }
+    &--violet{
+        background-color: $violet;
+    }
+    &--violet,
+    &--is-grayish-blue,
+    &--very-dark-blue{
+        color: $white;
+    }
+
+    &--has-background{
+
+    }
+
+    &--is-grayish-blue{
+        background-color: $very-dark-grayish-blue;
+    }
+    &--very-dark-blue{
+        background-color: $very-dark-blue;
+    }
+}

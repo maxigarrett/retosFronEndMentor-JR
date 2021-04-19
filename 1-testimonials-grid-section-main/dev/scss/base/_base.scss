@@ -1,0 +1,19 @@
+/*usamo esta llada para que funcione @use el "as" es para darle un nombre a esa importacion y poder usarla.
+si ponemos un nombre como v1 usaremos v1.variableDeSASS  y si ponemos un * estonces solo llamamos a la variable sin prefijo
+ej deuso de prefijo
+@use '../config/variables' as v1;
+body{
+   background-color: v1.$violet; 
+}*/
+
+@use '../config/variables' as *;
+body{
+   font-size: 13px;
+   padding: 1rem;
+   font-family: $primary-font;
+   background-color:$light-gray; 
+}
+body,
+blockquote,h2,p{
+   margin: 0;
+}

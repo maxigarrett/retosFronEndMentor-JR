@@ -1,5 +1,5 @@
-mixin user(imageAutor,author,work)
-    header.card__header
+mixin user(imageAutor,author,work,classModifier='')
+    header(class=`card__header ${classModifier}`.trim())
         .user__image-autor 
             img(src=imageAutor, alt="author").user__image
         .user__autor 

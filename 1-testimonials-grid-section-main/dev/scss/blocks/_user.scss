@@ -1,0 +1,28 @@
+@use '../config/variables' as *;
+.user{
+    
+    &__autor{
+        margin-left: 1rem;
+    }
+    &__name{
+        //se puede crear variables y asiganrle un valor dentro primer parametro es el nombre y el segundo parametro le valor o color
+        color: var(--author-color,$very-dark-blue);
+    }
+
+    &__work{
+        color:var(--work-author,$light-gray);
+    }
+    &__image{
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+        background-color: $light-gray;
+    }
+
+    &--is-ligth{
+        //reasignamos los valores de la variable en este modificador
+        --author-color:$white;
+        --work-author:#ffffffaa;
+    }
+}

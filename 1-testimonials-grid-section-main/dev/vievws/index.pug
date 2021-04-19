@@ -1,5 +1,5 @@
-include mixins/user.pug
-include mixins/card.pug
+include blocks/user.pug
+include blocks/card.pug
 include data/dataUser.pug
 doctype html
 html(lang="es")
@@ -14,5 +14,5 @@ html(lang="es")
     body
         main.main
             each cardData in cardInfo 
-                +card(cardData.title,cardData.description)
-                    +user(cardData.header.imageAuthor,cardData.header.authorName,cardData.header.work)
+                +card(cardData.title,cardData.description,cardData.classModifier)
+                    +user(cardData.header.imageAuthor,cardData.header.authorName,cardData.header.work,cardData.header.modifierClass)
