@@ -6,10 +6,16 @@ body{
    background-color: v1.$violet; 
 }*/
 body {
+  display: grid;
   font-size: 13px;
   padding: 1rem;
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: #cfcfcf;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    place-items: center;
+  }
 }
 
 body,
@@ -17,11 +23,35 @@ blockquote, h2, p {
   margin: 0;
 }
 
+.main {
+  display: grid;
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 310px);
+  }
+}
+
 .card {
   background-color: white;
   padding: 2rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .card--is-daniel {
+    grid-column: 1/3;
+    grid-row: 1/1;
+  }
+  .card--is-patrick {
+    grid-column: 2/4;
+  }
+  .card--is-kira {
+    grid-column: 4/5;
+    grid-row: 1/-1;
+  }
 }
 .card__header {
   display: flex;
@@ -41,9 +71,18 @@ blockquote, h2, p {
 }
 .card--violet {
   background-color: #7541c8;
+  background-image: url("../asset/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
 }
 .card--violet, .card--is-grayish-blue, .card--very-dark-blue {
   color: white;
+}
+.card____description {
+  color: var(--coment-color, #48556a);
+}
+.card____description--is-ligth {
+  --coment-color:#ffffffaa;
 }
 .card--is-grayish-blue {
   background-color: #48556a;

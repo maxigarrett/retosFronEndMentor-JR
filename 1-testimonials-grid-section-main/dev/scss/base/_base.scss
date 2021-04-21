@@ -7,13 +7,26 @@ body{
 }*/
 
 @use '../config/variables' as *;
+@use '../mixins/breackpoint' as *;
 body{
+   display: grid;
    font-size: 13px;
    padding: 1rem;
    font-family: $primary-font;
    background-color:$light-gray; 
+   @include desktop($desktop){
+      place-items: center;
+   }
 }
 body,
 blockquote,h2,p{
    margin: 0;
+}
+.main{
+   display: grid;
+   @include desktop($desktop){
+      gap: 15px;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(2,310px)
+   };
 }

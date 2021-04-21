@@ -14,5 +14,5 @@ html(lang="es")
     body
         main.main
             each cardData in cardInfo 
-                +card(cardData.title,cardData.description,cardData.classModifier)
+                +card(cardData.title,cardData.description,cardData.classModifier,cardData.colorComent)
                     +user(cardData.header.imageAuthor,cardData.header.authorName,cardData.header.work,cardData.header.modifierClass)

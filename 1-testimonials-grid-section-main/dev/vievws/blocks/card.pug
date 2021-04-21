@@ -1,4 +1,4 @@
-mixin card(title,descriptionAuthor,modifierClass='')
+mixin card(title,descriptionAuthor,modifierClass='',colorComent='')
     article(class=`card user ${modifierClass}`.trim())
         //-el TRIM() es por si no pasamos parametros para que no agregue espacio en blanco
         //-con solo escribir block podemos meter otro mixin dentro si ponemos el block abajo se ubicara el 
@@ -6,5 +6,5 @@ mixin card(title,descriptionAuthor,modifierClass='')
         //-(el otro mixin llamado user.pug lo llamamos dentro de este en index.pug)
         block 
         h2.card__title=title
-        blockquote.card__description=descriptionAuthor
+        blockquote(class=`card__description ${colorComent}`)=descriptionAuthor
     
