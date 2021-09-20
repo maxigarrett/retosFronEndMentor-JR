@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    font-family: 'Spartan', sans-serif;
+    background-color: var( --Light-Grayish-Cyan);
+}
+
+.header{
+    background-image: url('../assets/images/bg-header-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    background-color: var(--Desaturated-Dark-Cyan);
+}
+
+.main{
+    padding: 1px 2em;
+
+}
