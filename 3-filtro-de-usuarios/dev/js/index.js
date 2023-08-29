@@ -1,16 +1,19 @@
 const mainDOMElement=document.getElementById('main')
 const filterDOMElement=document.getElementById('filter')
 let tagInFilter=[];
-const getDataJson= async()=>{
-    try{
-        const res=await fetch('./data.json')
-        const data= await res.json()
-        console.log(data)
-        paintCard(data)
-    }catch(e){
-        console.log(`ERROR ${e}`)
+document.addEventListener('DOMContentLoaded',()=>{
+    const getDataJson= async()=>{
+        try{
+            const res=await fetch('./data.json')
+            const data= await res.json()
+            console.log(data)
+            paintCard(data)
+        }catch(e){
+            console.log(`ERROR ${e}`)
+        }
     }
-}
+    getDataJson()
+})
 //manera de recorrerlo si lo almacenamos dentro de una variable
 // const dataJ= getDataJson();
 // dataj.then(l=>console.log(l.data))
